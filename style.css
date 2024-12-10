@@ -1,39 +1,45 @@
 body {
-    align-items: center;
+    margin: 0;
     display: flex;
-    justify-items: center;
+    justify-content: center; /* place all the contents to center vertically */
+    align-items: center;
+    height: 100vh; /* place all the contents to center horizontally */
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .calculator {
-    max-width: fit-content;
-    max-height: fit-content;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #012675;
     border-radius: 12px;
-    overflow: hidden;
+    max-width: 500px;
+    overflow: hidden; /* hide long equation */
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: #003ab8;
+    color: white;
 }
 
 .keys {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 20px;
-}
-
-#display {
-    font-size: 50px;
-    border: solid 4px #012675;
-    border-radius: 12px;
-    padding: 12px;
+    grid-template-columns: repeat(4, 1fr); /* makes 4 column per row */
+    gap: 12px;
+    padding: 24px;
 }
 
 button {
-    height: 100px;
     width: 100px;
-    margin-bottom: 12px;
-    border: none;
+    height: 100px;
     border-radius: 50px;
-    font-size: 50px;
-    cursor: pointer;
+    border: none;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer; /* change cursor type when entering button */
 }
 
 button:hover {
@@ -42,4 +48,16 @@ button:hover {
 
 button:active {
     background-color: rgb(197, 197, 197);
-} 
+}
+
+#operatorBtn {
+    background-color: #fc0000;
+}
+
+#operatorBtn:hover {
+    background-color: #b60000;
+}
+
+#operatorBtn:active {
+    background-color: #5a0000;
+}
